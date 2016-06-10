@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import com.sun.ui.paint.PathEffectView;
 import com.sun.ui.paint.PathView;
+import com.sun.ui.paint.ShaderView;
 
 public class PaintActivity extends AppCompatActivity {
     private ViewGroup mPathViewContainer;
@@ -18,7 +19,8 @@ public class PaintActivity extends AppCompatActivity {
         mPathViewContainer = (ViewGroup) findViewById(R.id.activity_paint_path_view_container);
 
 //        addPathView();
-        addPathEffectView();
+//        addPathEffectView();
+        addShaderView();
     }
 
     private void addPathView() {
@@ -33,6 +35,13 @@ public class PaintActivity extends AppCompatActivity {
         pathEffectView.setLayoutParams(getLayoutParams());
 
         mPathViewContainer.addView(pathEffectView);
+    }
+
+    private void addShaderView() {
+        ShaderView shaderView = new ShaderView(getApplicationContext());
+        shaderView.setLayoutParams(getLayoutParams());
+
+        mPathViewContainer.addView(shaderView);
     }
 
     @NonNull
