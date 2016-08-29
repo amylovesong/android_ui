@@ -7,12 +7,12 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
 import android.util.AttributeSet;
-import android.widget.TextView;
+import android.view.View;
 
 /**
  * Custom view that use path to draw sth
  */
-public class PathView extends TextView {
+public class PathView extends View {
 
     public PathView(Context context) {
         super(context);
